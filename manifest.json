@@ -1,0 +1,34 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "/assets/js/jquery.min.js", "background.min.js"]
+   },
+   "browser_action": {
+      "default_title": "Trang Heo"
+   },
+
+   "chrome_url_overrides": {
+      "newtab": "dashboard.html"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Cái giao diện của tui",
+   "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+   "manifest_version": 2,
+   "name": "Trang Heo",
+   "offline_enabled": true,
+   "permissions": [
+       "geolocation",
+       "unlimitedStorage",
+       "history",
+       "management",
+       "topSites"
+   ],
+   "short_name": "Trang Heo",
+   "author" : "Heo",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}

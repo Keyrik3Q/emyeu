@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html {
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #444;
+}
+
+#root {
+    max-width: 450px;
+    position: absolute;
+    right: 31px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+form {
+    background: none;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+[type="text"],
+button {
+    display: inline-block;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+button {
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+    margin: 0 .5rem;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+[type="text"]:active,
+[type="text"]:focus {
+    outline: 0;
+    border: 2px solid #007bff;
+}
+
+[type="checkbox"] {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+h1 {
+    color: #222;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+li span {
+    display: inline-block;
+    padding: 4px 20px;
+    width: 250px;
+    border-radius: 10px;
+    color: #fff;
+    background: #00000078;
+    margin-left: 0px;
+}
+
+li span:hover {
+    background: rgba(179, 215, 255, 0.52);
+}
+
+li span:focus {
+    outline: 0;
+    border: 2px solid #007bff;
+    background: rgba(179, 207, 255, 0.52)
+}
+
+
+/*button*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 35px;
+    height: 17px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(18px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
